@@ -1,6 +1,6 @@
 def encontrar_min_max(lista):
     if not lista:
-        return None, None  # Devolvemos None si la lista está vacía
+        return None, None
 
     minimo = maximo = lista[0]
 
