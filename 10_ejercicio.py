@@ -1,18 +1,18 @@
-def factorial(numero):
-    if numero < 0:
+def factorial_iterativo(n):
+    if n < 0:
         return None  
-    elif numero == 0:
-        return 1  
-
+    if n == 0 or n == 1:
+        return 1
+    
     resultado = 1
-    for i in range(1, numero + 1):
+    for i in range(2, n + 1):
         resultado *= i
-
     return resultado
 
-numero_dado = int(input("ingrese un numero: "))
-resultado_factorial = factorial(numero_dado)
-if resultado_factorial is not None:
-    print(f"El factorial de {numero_dado} es: {resultado_factorial}")
+numero = int(input("Ingresa un número: "))
+resultado = factorial_iterativo(numero)
+
+if resultado is None:
+    print("No se puede calcular el factorial de un número negativo.")
 else:
-    print("El factorial no está definido para números negativos.")
+    print(f"El factorial de {numero} es {resultado}")
